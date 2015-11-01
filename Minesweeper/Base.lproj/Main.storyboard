@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gHC-wl-vdy" userLabel="BoardView">
+                                <rect key="frame" x="0.0" y="90" width="600" height="330"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ugn-Z2-caS">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Lio-aC-DJf"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="SFT-S9-lrk"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minesweeper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFJ-MZ-Adb">
+                                <rect key="frame" x="236" y="20" width="128.5" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mines left: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjU-lw-uck">
+                                <rect key="frame" x="10" y="60" width="76" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynK-kE-FIg">
+                                <rect key="frame" x="91" y="60" width="17" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Eh-cR-PVz">
+                                <rect key="frame" x="261" y="435" width="77" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGameButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2KH-HO-kqj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6W-7d-Xle">
+                                <rect key="frame" x="279" y="475" width="42" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cheat">
+                                    <color key="titleColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cheatButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5QX-M9-o4F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyH-vR-FZl">
+                                <rect key="frame" x="272" y="515" width="56" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Validate">
+                                    <color key="titleColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="validateButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oNX-75-1Gt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ynK-kE-FIg" firstAttribute="leading" secondItem="vjU-lw-uck" secondAttribute="trailing" constant="5" id="7DL-lo-hFQ"/>
+                            <constraint firstItem="UFJ-MZ-Adb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="8Mh-2c-Qtj"/>
+                            <constraint firstAttribute="trailing" secondItem="gHC-wl-vdy" secondAttribute="trailing" id="EO1-S3-B5c"/>
+                            <constraint firstItem="gHC-wl-vdy" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="80" id="GNH-b1-2fe"/>
+                            <constraint firstItem="s6W-7d-Xle" firstAttribute="top" secondItem="4Eh-cR-PVz" secondAttribute="bottom" constant="10" id="LYL-iz-p0V"/>
+                            <constraint firstItem="gHC-wl-vdy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ToH-HO-sdF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gHC-wl-vdy" secondAttribute="bottom" constant="180" id="Y57-bc-h28"/>
+                            <constraint firstItem="gHC-wl-vdy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="70" id="YWc-iK-ILq"/>
+                            <constraint firstItem="ynK-kE-FIg" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="60" id="a2B-C2-0EJ"/>
+                            <constraint firstAttribute="centerX" secondItem="gHC-wl-vdy" secondAttribute="centerX" constant="-2" id="biM-zp-I7U"/>
+                            <constraint firstItem="vjU-lw-uck" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="cho-Sw-5Lv"/>
+                            <constraint firstAttribute="centerX" secondItem="4Eh-cR-PVz" secondAttribute="centerX" id="f9H-8N-15D"/>
+                            <constraint firstAttribute="centerY" secondItem="gHC-wl-vdy" secondAttribute="centerY" constant="26" id="i3N-mO-AbC"/>
+                            <constraint firstAttribute="bottom" secondItem="gHC-wl-vdy" secondAttribute="bottom" constant="80" id="l3V-No-xsP"/>
+                            <constraint firstItem="IyH-vR-FZl" firstAttribute="top" secondItem="s6W-7d-Xle" secondAttribute="bottom" constant="10" id="liz-nP-2EN"/>
+                            <constraint firstAttribute="centerX" secondItem="s6W-7d-Xle" secondAttribute="centerX" id="qah-0R-aKy"/>
+                            <constraint firstAttribute="centerX" secondItem="UFJ-MZ-Adb" secondAttribute="centerX" id="wV8-qq-aTX"/>
+                            <constraint firstAttribute="centerX" secondItem="IyH-vR-FZl" secondAttribute="centerX" id="wZF-in-uRW"/>
+                            <constraint firstItem="vjU-lw-uck" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="60" id="xji-bu-wHe"/>
+                            <constraint firstItem="4Eh-cR-PVz" firstAttribute="top" secondItem="gHC-wl-vdy" secondAttribute="bottom" constant="15" id="xtj-HM-JFT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GNH-b1-2fe"/>
+                                <exclude reference="biM-zp-I7U"/>
+                                <exclude reference="i3N-mO-AbC"/>
+                                <exclude reference="l3V-No-xsP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="boardView" destination="gHC-wl-vdy" id="wrg-1P-IDF"/>
+                        <outlet property="minesLeftLabel" destination="ynK-kE-FIg" id="KMB-fz-wFy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -96,6 +96,7 @@
 		A58B3FAD1BDD76C800CF8BF6 /* Minesweeper */ = {
 			isa = PBXGroup;
 			children = (
+				A58B3FE51BE688F400CF8BF6 /* mine_img.png */,
 				A58B3FD71BDD91D100CF8BF6 /* GameViewController.h */,
 				A58B3FD81BDD91D100CF8BF6 /* GameViewController.m */,
 				A58B3FDA1BDDED4100CF8BF6 /* Square.h */,
@@ -120,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				A58B3FAF1BDD76C800CF8BF6 /* Info.plist */,
-				A58B3FE51BE688F400CF8BF6 /* mine_img.png */,
 				A58B3FB01BDD76C800CF8BF6 /* main.m */,
 			);
 			name = "Supporting Files";
